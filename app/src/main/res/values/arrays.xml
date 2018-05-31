@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="source">
+        <item>其他</item>
+        <item>QQ</item>
+        <item>微信</item>
+        <item>短信</item>
+        <item>电话</item>
+    </string-array>
+</resources>

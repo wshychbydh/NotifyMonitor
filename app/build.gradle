@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    def localProps = new Properties()
+    def signConfigFile = project.rootProject.file('local.properties')
+    def hasSignConfig = false
+    if (signConfigFile.exists()) {
+        localProps.load(signConfigFile.newInputStream())
+        hasSignConfig = localProps['keystore.storeFile'] != null
+    }
+
+    signingConfigs {
+        release {
+            keyAlias localProps['keystore.keyAlias']
+            keyPassword localProps['keystore.keyPassword']
+            storeFile file(localProps['keystore.storeFile'])
+            storePassword localProps['keystore.storePassword']
+        }
+
+        debug {
+            storeFile file(project.rootProject.file('debug.keystore'))
+            storePassword 'android'
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+        }
+    }
+    compileSdkVersion 25
+    defaultConfig {
+        applicationId "com.cool.eye.notify"
+        minSdkVersion 20
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            signingConfig hasSignConfig ? signingConfigs.release : signingConfigs.debug
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:25.4.0'
+    implementation 'com.android.support:recyclerview-v7:25.4.0'
+    implementation 'com.android.support:design:25.4.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+}

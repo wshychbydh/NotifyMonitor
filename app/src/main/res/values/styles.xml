@@ -1,0 +1,123 @@
+<resources>
+
+    <style name="Theme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/windowBackground</item>
+        <item name="android:editTextStyle">@style/Widget.Client.EditText</item>
+        <item name="editTextStyle">@style/Widget.Client.EditText</item>
+        <item name="android:textViewStyle">@style/Widget.Client.TextView</item>
+        <item name="android:buttonStyle">@style/Widget.Client.Button</item>
+        <item name="android:screenOrientation">portrait</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:actionBarSize">?android:attr/action</item>
+        <item name="android:windowAnimationStyle">@style/activityAnim</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="Theme.Light">
+        <item name="colorPrimary">@android:color/transparent</item>
+        <item name="colorPrimaryDark">@android:color/transparent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.Light" />
+
+    <style name="AppTheme.Full">
+        <item name="android:windowBackground">@color/windowBackground</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <!-- 使用style方式定义activity切换动画 -->
+    <style name="activityAnim">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_fade_in_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_fade_out_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_bottom</item>
+    </style>
+
+    <style name="Widget.Client.TextView" parent="android:Widget.Holo.TextView">
+        <item name="android:textSize">@dimen/content</item>
+        <item name="android:textColor">@color/content</item>
+    </style>
+
+    <style name="Widget.Client.EditText" parent="android:Widget.Holo.EditText">
+        <item name="android:singleLine">true</item>
+        <item name="android:textColor">@color/title</item>
+        <item name="android:textSize">@dimen/content</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:background">@null</item>
+        <item name="android:textCursorDrawable">@null</item>
+    </style>
+
+    <style name="Widget.Client.Button" parent="android:Widget.Holo.Light.Button">
+        <item name="android:textSize">@dimen/content_b</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:paddingStart">@dimen/margin_b</item>
+        <item name="android:paddingEnd">@dimen/margin_b</item>
+        <item name="android:paddingTop">@dimen/padding_m</item>
+        <item name="android:paddingBottom">@dimen/padding_m</item>
+        <item name="android:background">@drawable/selector_button_white_gold_corner</item>
+    </style>
+
+    <style name="FullScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+
+    <style name="FullScreenTheme.Splash">
+        <!--<item name="android:windowBackground">@drawable/img_splash</item>-->
+    </style>
+
+    <style name="CustomDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="BottomDialog" parent="CustomDialog">
+        <item name="android:windowNoTitle">false</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowAnimationStyle">@style/DialogWindowAnimation</item>
+    </style>
+
+    <style name="DialogWindowAnimation">
+        <item name="android:windowEnterAnimation">@anim/slide_bottom_in</item>
+        <item name="android:windowExitAnimation">@anim/slide_bottom_out</item>
+    </style>
+
+    <style name="ProgressDialog" parent="CustomDialog">
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="divider">
+        <item name="android:layout_width">1px</item>
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/divider</item>
+    </style>
+
+    <style name="common_progress">
+        <item name="android:indeterminate">false</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/progress_horizontal</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+        <item name="android:minHeight">10dip</item>
+        <item name="android:maxHeight">20dip</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:max">100</item>
+        <item name="android:progress">0</item>
+    </style>
+
+</resources>

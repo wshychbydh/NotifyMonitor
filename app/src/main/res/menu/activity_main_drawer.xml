@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <item android:title="@string/function">
+        <menu>
+            <item
+                android:id="@+id/nav_platform"
+                android:icon="@drawable/ic_menu_camera"
+                android:title="@string/attention_platform" />
+            <item
+                android:id="@+id/nav_attention"
+                android:icon="@drawable/ic_menu_gallery"
+                android:title="@string/attention" />
+            <item
+                android:id="@+id/nav_msg"
+                android:icon="@drawable/ic_menu_slideshow"
+                android:title="@string/history" />
+            <item
+                android:id="@+id/nav_info"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="@string/info" />
+        </menu>
+    </item>
+
+    <item android:title="@string/share">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/share_link" />
+            <item
+                android:id="@+id/nav_share_code"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/share_code" />
+        </menu>
+    </item>
+
+</menu>

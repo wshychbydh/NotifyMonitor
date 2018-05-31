@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="title">#333333</color>
+    <color name="content">#666666</color>
+
+    <color name="origin">#ea5826</color>
+    <color name="origin_pressed">#7aea5826</color>
+    <color name="gray">#999999</color>
+    <color name="gray_pressed">#7a999999</color>
+    <color name="white_pressed">@color/windowBackground</color>
+
+    <color name="gold">#d79d45</color>
+    <color name="gold_light">#f0c789</color>
+    <color name="gold_pressed">#7ad79d45</color>
+    <color name="gold_start">#e2c188</color>
+    <color name="gold_end">#caa25f</color>
+    <color name="gold_start_pressed">#7ae2c188</color>
+    <color name="gold_end_pressed">#7acaa25f</color>
+    <color name="windowBackground">#f3f5f7</color>
+    <color name="shadow_btn">#60e2c188</color>
+    <color name="gold_buyback_normal">#dddddd</color>
+    <!--旧金回购-->
+    <color name="gold_rate_price">#999999</color>
+
+    <color name="gold_default_start">#66e2c188</color>
+    <color name="gold_default_end">#caa25f</color>
+    <color name="divider">#dcdcdc</color>
+    <color name="gold_text">#f9deb2</color>
+    <color name="gray_light">#f6f8fa</color>
+    <color name="bg_text">#f6f8fa</color>
+</resources>

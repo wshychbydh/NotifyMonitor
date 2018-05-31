@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ZoneView">
+        <attr name="bg_color" format="color" />
+        <attr name="front_color" format="color" />
+        <attr name="text_color" format="color" />
+        <attr name="head_drawable" format="reference" />
+        <attr name="phone_head_padding" format="dimension" />
+        <attr name="phone_name_padding" format="dimension" />
+        <attr name="head_radius" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="TitleView">
+        <attr name="backDrawable" format="reference" />
+        <attr name="title" format="string" />
+        <attr name="submit" format="string" />
+        <attr name="bg" format="color" />
+        <attr name="isImmersion" format="boolean" />
+        <attr name="titleColor" format="color" />
+        <attr name="submitColor" format="color" />
+    </declare-styleable>
+</resources>
